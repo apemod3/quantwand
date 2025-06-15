@@ -3,7 +3,7 @@ import { Calculator, Plus, Trash2, PieChart, TrendingUp } from 'lucide-react';
 import axios from 'axios';
 import { PieChart as RechartsPC, Pie, Cell, ResponsiveContainer, Tooltip, Legend } from 'recharts';
 
-const API_BASE = 'http://localhost:5000/api';
+const API_BASE = 'https://quantwand.onrender.com/api';
 
 function PortfolioOptimizer() {
   const [assets, setAssets] = useState([

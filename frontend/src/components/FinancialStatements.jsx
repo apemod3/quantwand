@@ -3,7 +3,7 @@ import { FileText, Search, TrendingUp, TrendingDown, BarChart3 } from 'lucide-re
 import axios from 'axios';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from 'recharts';
 
-const API_BASE = 'http://localhost:5000/api';
+const API_BASE = 'https://quantwand.onrender.com/api';
 
 function FinancialStatements() {
   const [symbol, setSymbol] = useState('AAPL');
