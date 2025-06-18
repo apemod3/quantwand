@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
-import { TrendingUp, DollarSign, Bitcoin, PieChart, Activity, BarChart3, LineChart } from 'lucide-react';
+import { TrendingUp, DollarSign, Bitcoin, PieChart, Activity, BarChart3, LineChart, AlertTriangle } from 'lucide-react';
 import MarketOverview from './components/MarketOverview';
 import PortfolioOptimizer from './components/PortfolioOptimizer';
 import RiskAnalytics from './components/RiskAnalytics';
 import FinancialStatements from './components/FinancialStatements';
+import MarketCrashSimulator from './components/MarketCrashSimulator';
 
 function App() {
   const [activeTab, setActiveTab] = useState('market');
@@ -21,6 +22,7 @@ function App() {
     { id: 'portfolio', name: 'Portfolio Optimizer', icon: PieChart },
     { id: 'risk', name: 'Risk Analytics', icon: Activity },
     { id: 'financials', name: 'Financial Statements', icon: BarChart3 },
+    { id: 'crash', name: 'Crash Simulator', icon: AlertTriangle },
   ];
 
   return (
@@ -82,6 +84,7 @@ function App() {
         {activeTab === 'portfolio' && <PortfolioOptimizer />}
         {activeTab === 'risk' && <RiskAnalytics />}
         {activeTab === 'financials' && <FinancialStatements />}
+        {activeTab === 'crash' && <MarketCrashSimulator />}
       </main>
 
       {/* Footer */}
