@@ -53,7 +53,7 @@ function App() {
         </div>
       </header>
 
-      {/* Navigation */}
+      {/* Navigation  */}
       <nav className="bg-bloomberg-light-gray border-b border-gray-800">
         <div className="container mx-auto px-4">
           <div className="flex space-x-1">
