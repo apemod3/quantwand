@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { TrendingUp, DollarSign, Bitcoin, PieChart, Activity, BarChart3, LineChart, AlertTriangle } from 'lucide-react';
 import MarketOverview from './components/MarketOverview';
-import PortfolioOptimizer from './components/EnhancedPortfolioOptimizer';
+import PortfolioOptimizer from './components/EnhancedPortfolioOptimizer.jsx';
 import RiskAnalytics from './components/RiskAnalytics';
 import FinancialStatements from './components/FinancialStatements';
 import MarketCrashSimulator from './components/MarketCrashSimulator';
