@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
 import { TrendingUp, DollarSign, Bitcoin, PieChart, Activity, BarChart3, LineChart, AlertTriangle } from 'lucide-react';
 import MarketOverview from './components/MarketOverview';
-import PortfolioOptimizer from './components/EnhancedPortfolioOptimizer.jsx';
+import EnhancedPortfolioOptimizer from './components/EnhancedPortfolioOptimizer';
 import RiskAnalytics from './components/RiskAnalytics';
 import FinancialStatements from './components/FinancialStatements';
 import MarketCrashSimulator from './components/MarketCrashSimulator';
+
+const PortfolioOptimizer = EnhancedPortfolioOptimizer;
 
 function App() {
   const [activeTab, setActiveTab] = useState('market');
