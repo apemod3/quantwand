@@ -8,7 +8,7 @@ import {
   LineChart, Line
 } from 'recharts';
 
-const API_BASE = 'http://localhost:5000/api';
+const API_BASE = 'https://quantwand.onrender.com/api';
 
 function EnhancedPortfolioOptimizer() {
   const [assets, setAssets] = useState([
