@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const dotenv = require('dotenv');
 const axios = require('axios');
+const PortfolioOptimizer = require('./portfolioOptimizer');
 
 // Load environment variables
 dotenv.config();
@@ -17,6 +18,8 @@ app.use(express.json());
 const ALPHA_VANTAGE_KEY = process.env.ALPHA_VANTAGE_API_KEY;
 const COINGECKO_KEY = process.env.COINGECKO_API_KEY;
 const FMP_KEY = process.env.FMP_API_KEY;
+
+const portfolioOptimizer = new PortfolioOptimizer(ALPHA_VANTAGE_KEY);
 
 // Health check endpoint
 app.get('/api/health', (req, res) => {
@@ -90,25 +93,15 @@ app.get('/api/financials/:symbol', async (req, res) => {
   }
 });
 
-// Portfolio optimization endpoint (placeholder for now)
+// Enhanced portfolio optimization endpoint
 app.post('/api/portfolio/optimize', async (req, res) => {
   try {
     const { assets, constraints } = req.body;
     
-    // TODO: Implement Modern Portfolio Theory optimization
-    // For now, return equal weight portfolio
-    const equalWeight = 1 / assets.length;
-    const optimizedWeights = assets.map(asset => ({
-      symbol: asset,
-      weight: equalWeight
-    }));
+    // Use the advanced optimizer
+    const results = await portfolioOptimizer.optimizePortfolio(assets, constraints);
     
-    res.json({
-      optimizedWeights,
-      expectedReturn: 0.08, // Placeholder
-      risk: 0.15, // Placeholder
-      sharpeRatio: 0.53 // Placeholder
-    });
+    res.json(results);
   } catch (error) {
     console.error('Error optimizing portfolio:', error);
     res.status(500).json({ error: 'Failed to optimize portfolio' });
