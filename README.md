@@ -6,8 +6,8 @@ A sophisticated financial analytics terminal built with React and Express.js, de
 
 ## 🚀 Live Demo
 
-- **Frontend**: [QuantWand Terminal](https://quantwand-frontend.vercel.app)
-- **Backend API**: [QuantWand API](https://quantwand.onrender.com)
+- **Frontend**: [QuantWand Terminal](https://quantwand.vercel.app/)
+- **Backend API**: [QuantWand API](https://quantwand.onrender.com/api)
 
 ## 📊 Features
 
