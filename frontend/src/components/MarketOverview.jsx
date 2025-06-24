@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { TrendingUp, TrendingDown, DollarSign, Bitcoin, Euro, Loader2, Plus, X, Settings, RefreshCw } from 'lucide-react';
 import axios from 'axios';
 
-const API_BASE = 'http://localhost:5000/api';
+const API_BASE = 'https://quantwand.onrender.com/api';
 
 function MarketOverview() {
   // Load watchlist from localStorage or use defaults
