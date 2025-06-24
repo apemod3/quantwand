@@ -409,10 +409,5 @@ This project is licensed under the ISC License - see the package.json files for 
 - **Recharts** for beautiful financial visualizations
 - **Tailwind CSS** for rapid UI development
 
-## 📞 Support
-
-For support, email your-email@example.com or create an issue in the GitHub repository.
-
----
 
 **Disclaimer**: This application is for educational and research purposes only. Not intended as financial advice. Always consult with qualified financial professionals before making investment decisions.
